@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", initial-scale=1.0">
+    <title>Generador de Horarios</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Generador de Horarios</h5>
+            <p class="card-text">Instrucciones:</p>
+            <p class="card-text">Ingresa los datos de la materias en su campo correspondiente y presiona el boton "Agregar Materia".</p>
+            <p class="card-text">Solo las materias seleccionadas, se tomaran en cuenta para generar los horarios.</p>
+            <p class="card-text"><b>NOTA: </b>Debe haber minimo 3 materias agregadas para generar horarios</p>
+        </div>
+    </div>
+    <br>    <!--Section to add classes-->
+    <div class="card width: 18rem;">
+        <div class="card-body">
+            <center><h5 class="card-title">Ingresar Clase</h5></center>
+            <br>
+            <form action="input" class="text-center " id="addSubjectForm">
+                <div class="form-group">
+                    <label for="#">Nombre de la Materia</label><input type="text" name="subjectName" id="subjectName" placeholder="Nombre de la Materia" class="text-center"><br><br>
+                    <label for="#">Nombre del Grupo</label><input type="text" name="subjectGroup" id="subjectGroup" placeholder="Nombre del Grupo" class="text-center"><br><br>
+                    <label for="#">Nombre del Profesor</label><input type="text" name="subjectTeacher" id="subjectTeacher" placeholder="Nombre del Profesor" class="text-center"><br><br>
+                </div>
+
+                <div class="form-group">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Días</th><th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hora de inicio</td>
+                                    <td><input type="time" id="mondayStartHour"/></td>
+                                    <td><input type="time" id="tuesdayStartHour"/></td>
+                                    <td><input type="time" id="wednesdayStartHour"/></td>
+                                    <td><input type="time" id="thursdayStartHour"/></td>
+                                    <td><input type="time" id="fridayStartHour"/></td>
+                            </tr>
+                            <tr>
+                                <td>Hora de fin</td>
+                                    <td><input type="time" id="mondayFinishHour"/></td>
+                                    <td><input type="time" id="tuesdayFinishHour"/></td>
+                                    <td><input type="time" id="wednesdayFinishHour"/></td>
+                                    <td><input type="time" id="thursdayFinishHour"/></td>
+                                    <td><input type="time" id="fridayFinishHour"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Materia</button>
+                <button type="click" class="btn btn-danger" id="btnClean">LIMPIAR CAMPOS</button>
+            </form>
+        </div>
+    </div>
+
+    <!--DIV FOR NOTIFICATIONS-->
+    <div id="divNotification">
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Materias Ingresadas</h3>
+            <center><button type="click" class="btn btn-primary" id="buttonGenerateSchedules">Generar Horarios</button></center><br>
+            <table class="table" id="tableAddedSubjects">
+                <thead>
+                    <tr>
+                        <th>Numero</th><th>Grupo</th><th>Nombre</th><th>Profesor</th><th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th><th>Seleccionar</th><th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Here Subjects added are inserted-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <center><h1>Horarios Generados</h1></center>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Horarios Generados</h5>
+            <div id="divSchedulesGenerated">
+                <!--Schedules generated are inserted here-->
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>
