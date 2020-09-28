@@ -1,5 +1,5 @@
 # Generador de Horarios hecho con Vanilla Javascript
-Aplicación web con una interfaz sencilla, que permita a los estudiantes ingresar sus materias con sus respectivas horas y la aplicación realiza todos las combinaciones posibles con las materias ingresadas, permitiendo al alumno generar horarios de manera mas rapida y simple. Todo el tráfico en la aplicación analizado con Google Analytics.
+Aplicación web con una interfaz sencilla, que permita a los estudiantes ingresar sus materias con sus respectivas horas y la aplicación realiza todos las combinaciones posibles con las materias ingresadas, permitiendo al alumno generar horarios de manera mas rapida y simple.
 
 ### Realizado en el año 2020. Javascript
 
